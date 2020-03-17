@@ -1,5 +1,8 @@
-{
-    "loops":10000000,
-    "sampling": 10,
-    "output_prefix" : "./out/output"
-}
+[{
+        "loops": 100000000,
+        "sampling": 10,
+        "output_prefix": "./out/output",
+        "server_A":10,
+        "server_B":15
+    }
+]

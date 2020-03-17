@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytic Model</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    When Server \(X\) is any server that has a mean processing time  \(\beta\). We can detemine a processing time from the following function
+    $$ F_X(x) = { 1\over\beta } e ^ {-{1\over\beta}x}$$
+
+    For Server A that has a mean processing time 10 seconds. The functions will be
+    $$ F_A(x) = { 1\over10 } e ^ {-{1\over10}x}$$
+
+    and Server B that has a mean processing time 15 seconds. The functions will be
+    $$ F_B(x) = { 1\over15 } e ^ {-{1\over15}x}$$
+
+    The question is to find the average of total processing time. Total processing time can be represented by \( F_T(x) \)
+    $$ F_T(x) = (F_A * F_B)(x) $$
+    $$ F_T(x) = \int_0^x{F_A(x-\tau) . F_B(\tau)} d\tau$$
+    $$ F_T(x) = \int_0^x{{ 1\over10 } e ^ {{-{1\over10}}(x-\tau)}.{ 1\over15 } e ^ {{-{1\over15}}\tau} d\tau }$$
+    $$ F_T(x) = {1\over150} \int_0^x{ e ^ {{-{1\over10}}x+{1\over10}\tau}. e ^ {{-{1\over15}}\tau} d\tau }$$
+    $$ F_T(x) = {1\over150} \int_0^x{ e ^ {{-{1\over10}}x+{3\over30}\tau{-{2\over30}}\tau} d\tau }$$
+    $$ F_T(x) = {1\over150} \int_0^x{ e ^ {{-{1\over10}}x+{1\over30}\tau} d\tau}$$
+    $$ F_T(x) = {30\over150} ({ e ^ {{-{1\over10}}x+{1\over30}x}} - { e ^ {{-{1\over10}}x+{1\over30}0}})$$
+    $$ F_T(x) = {1\over5} ({ e ^ {{-{3\over30}}x+{1\over30}x}} - { e ^ {{-{3\over30}}x}})$$
+    $$ F_T(x) = {1\over5} ({ e ^ {{-{1\over15}}x}} - { e ^ {{-{1\over10}}x}})$$
+
+    and now we have PDF of interested model.
+</body>
+</html>
