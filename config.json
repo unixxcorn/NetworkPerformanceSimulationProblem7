@@ -1,0 +1,5 @@
+{
+    "loops":10000000,
+    "sampling": 10,
+    "output_prefix" : "./out/output"
+}
