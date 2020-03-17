@@ -13,6 +13,6 @@ The problem is the client creates a session on the webserver. The webserver has 
 2. The probability that timed out ?
    `Timeout probability is 0.17183520 (17.18352 %)`
 3. Optimized Server A and B that make timeout probability lowerthan 10% ?
-   `Timeout probability is 0.17183520 (17.18352 %)`
+   `Timeout probability is 0.09957295 (9.957295 %) server A : 6 server B : 14`
 
 ![Simulation output](https://github.com/unixxcorn/NetworkPerformanceSimulationProblem7/blob/master/out/output.png?raw=true)
