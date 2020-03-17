@@ -6,7 +6,8 @@ The problem is the client creates a session on the webserver. The webserver has 
 ```
 
 ## Question
-1. Average processing time
-  Average processing time is 25.00293038 seconds
-2. The probability that timed out
-  Timeout probability is 0.17183520 (17.18352 %)
+1. Average processing time ?
+`Average processing time is 25.00293038 seconds`
+   
+2. The probability that timed out ?
+`Timeout probability is 0.17183520 (17.18352 %)`
