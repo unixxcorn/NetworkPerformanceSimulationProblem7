@@ -11,3 +11,5 @@ The problem is the client creates a session on the webserver. The webserver has 
    
 2. The probability that timed out ?
 `Timeout probability is 0.17183520 (17.18352 %)`
+
+![Simulation output](https://github.com/unixxcorn/NetworkPerformanceSimulationProblem7/blob/master/out/output.png?raw=true)
